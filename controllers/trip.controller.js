@@ -1,6 +1,6 @@
 const supabase = require('../config/supabase');
 
-export.createTrip = async (req, res) => {
+exports.createTrip = async (req, res) => {
     try {
     const { customer_id, role, vehicle_id, passengers, distance_km } = req.body;
     if(role !== 'customer') {
