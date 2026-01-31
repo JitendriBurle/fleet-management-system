@@ -4,7 +4,7 @@
 vehicles
 
 ## Description
-Stores vehicles created by owners and assigned to drivers.
+It stores vehicles created by owners and assigned to drivers.
 
 ## Columns
 
@@ -21,8 +21,8 @@ Stores vehicles created by owners and assigned to drivers.
 | created_at | timestamp | Default `now()` |
 
 ## Constraints
-- Registration number must be unique
-- Only owners can create vehicles (enforced at API level)
+- Registration number must be unique.
+- Only owners can create vehicles.
 
 ## Relationships
 - One **owner** → many vehicles

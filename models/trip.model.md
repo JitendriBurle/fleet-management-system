@@ -4,12 +4,12 @@
 trips
 
 ## Description
-Stores trips created by customers using available vehicles.
+It stores the trips created by customers.
 
 ## Columns
 
 | Column Name | Data Type | Constraints |
-|------------|----------|-------------|
+|-----------=-|-----------|-------------|
 | id | uuid | Primary Key, default `uuid_generate_v4()` |
 | customer_id | uuid | NOT NULL, Foreign Key → users(id) |
 | vehicle_id | uuid | NOT NULL, Foreign Key → vehicles(id) |
@@ -23,8 +23,8 @@ Stores trips created by customers using available vehicles.
 | created_at | timestamp | Default `now()` |
 
 ## Constraints
-- Passengers must not exceed vehicle allowed_passengers (API validation)
-- Vehicle must be available before trip creation
+* Passengers must not be exceeded than the limit.
+* Vehicle should be available before creating a trip.
 
 ## Relationships
 - One **customer** → many trips
